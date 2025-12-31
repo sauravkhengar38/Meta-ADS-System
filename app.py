@@ -226,3 +226,7 @@ elif menu == "ℹ️ About":
         - Meta Ads Library API
         """
     )
+
+@st.cache_resource
+def load_zero_shot():
+    return pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
