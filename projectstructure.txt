@@ -1,0 +1,17 @@
+meta_ai_ads_tool/
+│
+├── app.py
+│
+├── services/
+│   ├── meta_ads_api.py       👈 META API KEY USED HERE
+│   ├── zero_shot.py
+│   ├── sentiment.py
+│   ├── similarity.py
+│   ├── cta_analysis.py
+│   └── copy_optimizer.py
+│
+├── utils/
+│   ├── scoring.py
+│   └── trend_analysis.py    👈 MARKET TRENDS
+│
+└── requirements.txt
