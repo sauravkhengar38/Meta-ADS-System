@@ -25,6 +25,22 @@ def analyze_emotion(ad_text: str):
             "emotion": item["label"],
             "confidence": round(item["score"], 3)
         })
+def detect_emotion(text: str):
+    return sentiment_pipeline(text)
+from transformers import pipeline
+
+sentiment_pipeline = pipeline(
+    "text-classification",
+    model="cardiffnlp/twitter-roberta-base-emotion",
+    top_k=None
+)
+
+def detect_emotion(text: str):
+    """
+    Returns emotion scores for input text
+    """
+    return sentiment_pipeline(text)
+
 
     # Sort by highest confidence
     emotions = sorted(emotions, key=lambda x: x["confidence"], reverse=True)
