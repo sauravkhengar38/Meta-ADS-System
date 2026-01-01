@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import warnings
 from warnings import filterwarnings
-from services.sentiment import detect_emotion
+from services.sentiment import analyze_emotion
 
 # ---------- Services ----------
 from services.zero_shot import classify_intent
